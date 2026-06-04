@@ -132,7 +132,7 @@ export const deleteTask = async (req, res) => {
     await writeTasks(filteredTasks);
 
     res.status(200).json({
-      message: "Deleted successfully",
+      message: "Task Deleted successfully",
     });
   } catch (error) {
     res.status(500).json({
