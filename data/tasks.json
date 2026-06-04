@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "id": "1780575066181",
+    "title": "Learn Express",
+    "description": "Practice CRUD",
+    "dueDate": "2026-06-10",
+    "completed": false,
+    "createdAt": "2026-06-04T12:11:06.181Z"
+  },
+  {
+    "id": "1780575127741",
+    "title": "Learn Docker",
+    "description": "Practice command of docker",
+    "dueDate": "2026-06-20",
+    "completed": false,
+    "createdAt": "2026-06-04T12:12:07.741Z"
+  }
+]
