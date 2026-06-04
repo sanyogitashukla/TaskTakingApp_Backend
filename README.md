@@ -1,30 +1,27 @@
 # Task Manager Assignment
 
-## Backend Status
+## Project Update
 
-✅ Backend completed and tested successfully
+Backend development has been completed and all APIs have been tested successfully using Postman.
 
-### Features Implemented
+### Completed
 
-* Create Task
-* View All Tasks
-* Update Task
-* Delete Task
-* Toggle Task Status
-* Filter Tasks (All / Active / Completed)
-* JSON File Persistence
-* Express.js REST APIs
-* ES Modules
+* Task CRUD APIs
+* Task status toggle
+* Task filtering (All, Active, Completed)
+* JSON file persistence
+* Express.js backend setup
+* Bug fix for update API (`task is not defined`)
 
-### Bug Fixed
+### Current Status
 
-* Fixed update API error: `task is not defined`
-* Corrected reference from `task[taskIndex]` to `tasks[taskIndex]`
+This commit contains the completed backend implementation. Due to time constraints, frontend development is being completed in the next phase.
 
-### Backend Testing
+### Next Steps
 
-All APIs tested successfully using Postman.
-
-### Next Phase
-
-Frontend development using React + Vite.
+* Set up React + Vite frontend
+* Integrate backend APIs
+* Implement task list UI
+* Add create, update, delete, and toggle functionality
+* Add filters, search, task counters, and overdue indicators
+* Add responsive styling and final project documentation
