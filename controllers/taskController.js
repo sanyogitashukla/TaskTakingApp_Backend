@@ -50,3 +50,93 @@ export const createTask = async (req, res) => {
     });
   }
 };
+
+export const updatedTask = async (req,res)=>{
+    try {
+        const {id}=req.params;
+        const {title,description,dueDate}=req.body
+
+        const tasks =await readTasks();
+
+        const taskIndex=tasks.findIndex((task)=>
+                task.id===id
+        )
+
+        if(taskIndex=== -1){
+            res.status(404).json({
+                message:"Task not available"
+            })
+        }
+
+        tasks[taskIndex] ={
+            ...tasks[taskIndex],
+            title,
+            description,
+            dueDate,
+        }  
+        
+        await writeTasks(tasks)
+
+        res.status(200).json(tasks[taskIndex]);
+    } catch (error) {
+        res.status(500).json({
+      message: error.message,
+    });
+    }
+}
+
+export const toggleTaskStatus = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const tasks = await readTasks();
+
+    const task = tasks.find(
+      (task) => task.id === id
+    );
+
+    if (!task) {
+      return res.status(404).json({
+        message: "Task not found",
+      });
+    }
+
+    task.completed = !task.completed;
+
+    await writeTasks(tasks);
+
+    res.status(200).json(task);
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+    });
+  }
+};
+
+export const deleteTask = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const tasks = await readTasks();
+
+    const filteredTasks = tasks.filter(
+      (task) => task.id !== id
+    );
+
+    if (filteredTasks.length === tasks.length) {
+      return res.status(404).json({
+        message: "Task not found",
+      });
+    }
+
+    await writeTasks(filteredTasks);
+
+    res.status(200).json({
+      message: "Task deleted successfully",
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+    });
+  }
+};
