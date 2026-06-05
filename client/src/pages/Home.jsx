@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-
 import Filters from "../components/Filter.jsx";
-
+import Stats from "../components/Stats.jsx";
 import TaskForm from "../components/TaskForm";
 import TaskList from "../components/TaskList";
+import SearchBar from "../components/SearchBar.jsx";
 
 import {
     getTasks,
@@ -16,6 +16,7 @@ import {
 function Home() {
     const [tasks, setTasks] = useState([]);
     const [filter, setFilter] = useState("all");
+    const [searchTerm, setSearchTerm] = useState("");
 
     const fetchTasks = async () => {
         try {
@@ -58,15 +59,21 @@ function Home() {
     };
 
     const filteredTasks = tasks.filter((task) => {
-        if (filter === "completed") {
-            return task.completed;
-        }
+        const matchesSearch =
+            task.title
+                .toLowerCase()
+                .includes(
+                    searchTerm.toLowerCase()
+                );
 
-        if (filter === "pending") {
-            return !task.completed;
-        }
+        const matchesFilter =
+            filter === "all"
+                ? true
+                : filter === "completed"
+                    ? task.completed
+                    : !task.completed;
 
-        return true;
+        return matchesSearch && matchesFilter;
     });
     return (
         <div className="container">
@@ -77,10 +84,19 @@ function Home() {
                 onAddTask={handleAddTask}
             />
 
+            <SearchBar
+                searchTerm={searchTerm}
+                setSearchTerm={setSearchTerm}
+            />
+
+
             <Filters
                 filter={filter}
                 setFilter={setFilter}
             />
+            
+            <Stats tasks={tasks} />
+
             <TaskList
                 tasks={filteredTasks}
                 onDelete={handleDelete}

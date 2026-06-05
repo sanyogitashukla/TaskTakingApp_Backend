@@ -13,6 +13,10 @@ body {
   max-width: 700px;
   margin: 40px auto;
   padding: 20px;
+  border-radius: 10px;
+  border: 0.5px solid rgb(63, 62, 63);
+
+  box-shadow: 2px 4px rgba(35, 20, 170, 0.08);
 }
 
 h1 {
@@ -24,6 +28,7 @@ h1 {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
+  border-radius: 8px;
 }
 
 .task-form input {
@@ -35,6 +40,7 @@ h1 {
 .task-form button {
   padding: 12px 20px;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
   background: black;
   color: white;
@@ -61,7 +67,7 @@ h1 {
 
 .completed {
   text-decoration: line-through;
-  color: gray;
+  color: rgb(122, 111, 111);
 }
 
 .delete-btn {
@@ -69,6 +75,8 @@ h1 {
   color: white;
 
   border: none;
+
+  border-radius: 8px;
 
   padding: 8px 14px;
 
@@ -99,6 +107,7 @@ h1 {
   margin-right: 10px;
   padding: 8px 14px;
   cursor: pointer;
+  border-radius: 8px;
 }
 .filters {
   display: flex;
@@ -122,4 +131,45 @@ h1 {
   .filters {
     flex-wrap: wrap;
   }
+}
+.stats {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  flex: 1;
+  background: rgb(217, 226, 225);
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.stat-card h3 {
+  margin-bottom: 10px;
+  color: black;
+}
+
+.stat-card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+@media (max-width: 600px) {
+  .stats {
+    flex-direction: column;
+  }
+}
+.search-container {
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
