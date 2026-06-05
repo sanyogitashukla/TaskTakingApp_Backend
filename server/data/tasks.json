@@ -12,7 +12,7 @@
     "title": "Learn Docker",
     "description": "Installed docker on laptop..Practice command of docker",
     "dueDate": "2026-06-20",
-    "completed": true,
+    "completed": false,
     "createdAt": "2026-06-04T12:12:07.741Z"
   },
   {
@@ -20,7 +20,7 @@
     "title": "Credit Card",
     "description": "Payment Due",
     "dueDate": "2026-06-26",
-    "completed": false,
+    "completed": true,
     "createdAt": "2026-06-04T15:07:54.591Z"
   },
   {
@@ -28,7 +28,7 @@
     "title": "grocery",
     "description": "",
     "dueDate": "",
-    "completed": true,
+    "completed": false,
     "createdAt": "2026-06-05T08:27:53.773Z"
   },
   {
@@ -44,7 +44,7 @@
     "title": "Watering The Plant",
     "description": "",
     "dueDate": "",
-    "completed": false,
+    "completed": true,
     "createdAt": "2026-06-05T09:31:13.677Z"
   }
 ]
