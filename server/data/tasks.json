@@ -1,50 +1,17 @@
 [
   {
-    "id": "1780575066181",
-    "title": "Learn Express",
-    "description": "Practice CRUD",
-    "dueDate": "2026-06-10",
-    "completed": false,
-    "createdAt": "2026-06-04T12:11:06.181Z"
+    "id": 1,
+    "title": "Learn React",
+    "completed": true
   },
   {
-    "id": "1780575127741",
-    "title": "Learn Docker",
-    "description": "Installed docker on laptop..Practice command of docker",
-    "dueDate": "2026-06-20",
-    "completed": false,
-    "createdAt": "2026-06-04T12:12:07.741Z"
+    "id": 2,
+    "title": "Build Task Manager",
+    "completed": false
   },
   {
-    "id": "1780585674591",
-    "title": "Credit Card",
-    "description": "Payment Due",
-    "dueDate": "2026-06-26",
-    "completed": true,
-    "createdAt": "2026-06-04T15:07:54.591Z"
-  },
-  {
-    "id": "1780648073773",
-    "title": "grocery",
-    "description": "",
-    "dueDate": "",
-    "completed": false,
-    "createdAt": "2026-06-05T08:27:53.773Z"
-  },
-  {
-    "id": "1780651832443",
-    "title": "Home Rent",
-    "description": "",
-    "dueDate": "",
-    "completed": false,
-    "createdAt": "2026-06-05T09:30:32.444Z"
-  },
-  {
-    "id": "1780651873677",
-    "title": "Watering The Plant",
-    "description": "",
-    "dueDate": "",
-    "completed": true,
-    "createdAt": "2026-06-05T09:31:13.677Z"
+    "id": 3,
+    "title": "Deploy Application",
+    "completed": false
   }
 ]

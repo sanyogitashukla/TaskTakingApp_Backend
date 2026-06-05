@@ -94,7 +94,7 @@ function Home() {
                 filter={filter}
                 setFilter={setFilter}
             />
-            
+
             <Stats tasks={tasks} />
 
             <TaskList
