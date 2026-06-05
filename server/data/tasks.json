@@ -22,5 +22,13 @@
     "dueDate": "2026-06-26",
     "completed": false,
     "createdAt": "2026-06-04T15:07:54.591Z"
+  },
+  {
+    "id": "1780648073773",
+    "title": "grocery",
+    "description": "",
+    "dueDate": "",
+    "completed": true,
+    "createdAt": "2026-06-05T08:27:53.773Z"
   }
 ]

@@ -87,12 +87,12 @@ export const updatedTask = async (req,res)=>{
 
 export const toggleTaskStatus = async (req, res) => {
   try {
-    const { id } = req.params;
+    const {id } =req.params;
 
     const tasks = await readTasks();
 
     const task = tasks.find(
-      (task) => task.id === id
+      (task) => String(task.id) === req.params.id
     );
 
     if (!task) {
@@ -132,7 +132,7 @@ export const deleteTask = async (req, res) => {
     await writeTasks(filteredTasks);
 
     res.status(200).json({
-      message: "Task Deleted successfully",
+      message: "Task Dsuccessfully",
     });
   } catch (error) {
     res.status(500).json({
