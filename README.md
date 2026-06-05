@@ -12,13 +12,15 @@ The goal of this project was to demonstrate a clear separation between frontend 
 
 ### Frontend
 
-[Add Vercel URL Here]
+https://frontend-deployment-9v1j.vercel.app?_vercel_share=u5ea6qR3zfokTdHsHQFT3cwIUaynfUzx
 
 ### Backend
 
-[Add Render URL Here]
+https://tasktakingapp-backend.onrender.com/api/tasks
 
----
+### GitHub Repository
+
+https://github.com/sanyogitashukla/TaskTakingApp_Backend
 
 ## Features
 
