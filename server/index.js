@@ -5,7 +5,7 @@ import app from "./app.js";
 const port =process.env.PORT || 5002;
 
 app.get("/",(req,res)=>{
-  res.status(200).json({message:"welcome!"})
+  return res.send("Welcome!!")
   })
 
 app.listen(port, () => {
