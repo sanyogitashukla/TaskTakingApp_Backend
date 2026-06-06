@@ -54,7 +54,11 @@ export const createTask = async (req, res) => {
 export const updatedTask = async (req,res)=>{
     try {
         const {id}=req.params;
-        const {title,description,dueDate}=req.body
+        task.title =req.body.title ?? task.title;
+
+        task.description =req.body.description ?? task.description;
+
+        task.dueDate =req.body.dueDate ?? task.dueDate;
 
         const tasks =await readTasks();
 
